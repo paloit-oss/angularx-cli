@@ -1,0 +1,37 @@
+{
+    "name": "@paloit-oss/angularx-cli",
+    "version": "1.0.0",
+    "description": "Angular/Typescript CLI (using angular-cli) based on Universal Frontend Architeacture",
+    "license": "MIT",
+    "repository": "https://github.com/paloit-oss/angularx-cli",
+    "main": "./lib/index.js",
+    "bin": {
+        "ngx-cli": "./bin/index.js"
+    },
+    "scripts": {
+        "commit": "commit",
+        "commitmsg": "commitlint -e $GIT_PARAMS"
+    },
+    "dependencies": {
+        "yargs": "10.0.3",
+        "chalk": "2.3.0",
+        "del": "3.0.0",
+        "lodash": "4.17.4",
+        "shelljs": "0.7.8",
+        "cpx": "1.5.0",
+
+        "@commitlint/cli": "5.2.5",
+        "@commitlint/config-angular": "5.1.1",
+        "@commitlint/prompt-cli": "5.2.5",
+        "husky": "0.14.3",
+        "lerna": "2.9.1",
+
+        "@paloit-oss/server-emulator": "file:../server-emulator"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "5.2.5",
+        "@commitlint/config-angular": "5.1.1",
+        "@commitlint/prompt-cli": "5.2.5",
+        "husky": "0.14.3"
+    }
+}
