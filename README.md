@@ -1,2 +1,2 @@
 # angularx-cli
-Angular CLI wrapper based on Universal Frontend Architecture
+Angular/Typescript CLI (using angular-cli) based on Universal Frontend Architeacture
