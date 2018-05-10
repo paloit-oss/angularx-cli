@@ -1,4 +1,4 @@
-exports.command = 'build [mode]';
+exports.command = 'build [mode] [apps..]';
 exports.desc = 'Build';
 exports.builder = {
     mode: {
@@ -6,7 +6,14 @@ exports.builder = {
         default: 'prod',
         type: 'string',
         desc: 'Build Mode',
+        group: 'Build Options:',
         choices: ['prod', 'dev', 'watch', 'package']
+    },
+    apps: {
+        alias: 'a',
+        type: 'array',
+        group: 'Build Options:',
+        desc: 'Names of the apps to build or serve'
     }
 };
 exports.handler = (argv) => {
