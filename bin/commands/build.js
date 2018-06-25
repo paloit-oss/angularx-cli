@@ -1,4 +1,4 @@
-exports.command = 'build [mode] [apps..] [includeBinary]';
+exports.command = 'build [mode] [apps..]';
 exports.desc = 'Build';
 exports.builder = {
     mode: {
@@ -14,12 +14,6 @@ exports.builder = {
         type: 'array',
         group: 'Build Options:',
         desc: 'Names of the apps to build or serve'
-    },
-    includeBinary: {
-        alias: 'ib',
-        type: 'boolean',
-        group: 'Build Options:',
-        desc: 'Build from the Binary Packages'
     }
 };
 exports.handler = (argv) => {

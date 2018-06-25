@@ -1,10 +1,11 @@
 const webpackMerge = require('webpack-merge');
-const packageConfig = require(process.cwd() + '/.angularx-cli.json') || {};
+const packageConfig = require(process.cwd() + '/angularx.json') || {};
 
 const cliDefaultConfigs = {
     minimumNodeVersion: 8,
     outputFolderPaths : {
-        output: './dist',
+        apps: './dist',
+        libs: './libs/dist',
         docs: './docs',
         coverage: './coverage',
         mockapi: './mock-api'
@@ -15,4 +16,8 @@ const cliDefaultConfigs = {
         emulatorAPIFolderPath: '/api-endpoints'
     }
 };
-module.exports = webpackMerge(cliDefaultConfigs, packageConfig);
+module.exports = {
+    'angular': require(process.cwd() + '/angular.json'),
+    'angularx': webpackMerge(cliDefaultConfigs, packageConfig),
+    'nx': require(process.cwd() + '/nx.json')
+}
