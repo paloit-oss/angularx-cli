@@ -3,13 +3,6 @@ const packageConfig = require(process.cwd() + '/angularx.json') || {};
 
 const cliDefaultConfigs = {
     minimumNodeVersion: 8,
-    outputFolderPaths : {
-        apps: './dist',
-        libs: './libs/dist',
-        docs: './docs',
-        coverage: './coverage',
-        mockapi: './mock-api'
-    },
     server : {
         port: 9000,
         emulatorPort: 7000,

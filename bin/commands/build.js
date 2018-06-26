@@ -9,11 +9,11 @@ exports.builder = {
         group: 'Build Options:',
         choices: ['prod', 'dev', 'watch', 'package']
     },
-    apps: {
-        alias: 'a',
+    projects: {
+        alias: 'p',
         type: 'array',
         group: 'Build Options:',
-        desc: 'Names of the apps to build or serve'
+        desc: 'Names of the apps/libs to build, package or serve'
     }
 };
 exports.handler = (argv) => {
