@@ -1,4 +1,4 @@
-exports.command = 'generate-docs [mode] [type]';
+exports.command = 'generate-docs [mode] [type] [coverageTest]';
 exports.aliases = ['docs'];
 exports.desc = 'Generate Docs';
 exports.builder = {
@@ -8,7 +8,7 @@ exports.builder = {
         type: 'string',
         desc: 'Docs Generation Mode',
         group: 'Docs Generation Options:',
-        choices: ['components', 'styles', 'all']
+        choices: ['api', 'styles', 'all']
     },
     type: {
         alias: 't',
@@ -17,6 +17,13 @@ exports.builder = {
         desc: 'Type of Project - Apps or Libs',
         group: 'Docs Generation Options:',
         choices: ['apps', 'libs', 'all']
+    },
+    coverageTest: {
+        alias: 'c',
+        type: 'boolean',
+        default: false,
+        desc: 'Test for docs coverage',
+        group: 'Docs Generation Options:'
     }
 };
 

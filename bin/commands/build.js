@@ -1,4 +1,4 @@
-exports.command = 'build [mode] [apps..]';
+exports.command = 'build [mode] [projects..]';
 exports.desc = 'Build';
 exports.builder = {
     mode: {

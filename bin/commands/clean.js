@@ -1,4 +1,4 @@
-exports.command = 'clean [all] [names..] [files..]';
+exports.command = 'clean [all] [files..]';
 exports.desc = 'Deletes folders/files';
 exports.builder = {
     all: {
@@ -6,12 +6,6 @@ exports.builder = {
         alias: 'a',
         group: 'Clean Options:',
         description: 'Deletes all the folders/files specified in the cli config \'folder_paths\' '
-    },
-    names: {
-        type: 'array',
-        alias: 'n',
-        group: 'Clean Options:',
-        description: 'Deletes the folders/files by \'name\' that are specified in the cli config \'folder_paths\' '
     },
     files: {
         type: 'array',

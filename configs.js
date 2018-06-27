@@ -3,6 +3,7 @@ const packageConfig = require(process.cwd() + '/angularx.json') || {};
 
 const cliDefaultConfigs = {
     minimumNodeVersion: 8,
+    outputFolder: './dist',
     server : {
         port: 9000,
         emulatorPort: 7000,
