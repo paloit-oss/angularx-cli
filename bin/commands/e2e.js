@@ -1,11 +1,11 @@
-exports.command = 'e2e [apps..]';
+exports.command = 'e2e [projects..]';
 exports.desc = 'End to End Tests';
 exports.builder = {
-    apps: {
-        alias: 'a',
+    projects: {
+        alias: 'p',
         type: 'array',
         group: 'E2E Options:',
-        desc: 'Names of the apps to test end to end'
+        desc: 'Names of the apps/libs to test end to end'
     }
 };
 
